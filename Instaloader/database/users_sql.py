@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Bigintegar, String
+from sqlalchemy import Column, BigIntegar, String
 from Instaloader.database import BASE, SESSION
 
 
