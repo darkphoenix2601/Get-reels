@@ -3,4 +3,4 @@ pyromod
 TgCrypto
 SQLAlchemy~=1.4.31
 psycopg2
-instaloader~=4.9b2
+instaloader~=4.9
