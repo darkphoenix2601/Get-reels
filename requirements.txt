@@ -1,4 +1,4 @@
-pyrogram
+pyrogram==1.4.1
 pyromod
 TgCrypto
 SQLAlchemy~=1.4.31
