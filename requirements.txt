@@ -1,6 +1,6 @@
-pyrogram==1.4.0
+pyrogram
 pyromod
 TgCrypto
-SQLAlchemy~=1.4.31
+SQLAlchemy
 psycopg2
-instaloader~=4.9b2
+instaloader
