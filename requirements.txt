@@ -1,4 +1,5 @@
 pyrogram==1.4.16
+SQLAlchemy~=1.4.21
 pyromod
 TgCrypto
 psycopg2
