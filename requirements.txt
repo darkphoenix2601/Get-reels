@@ -2,4 +2,4 @@ pyrogram==1.4.16
 pyromod
 TgCrypto
 psycopg2
-instaloader==4.9.5
+instaloader~=4.9.5
