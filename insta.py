@@ -1,8 +1,8 @@
-import Config
 import logging
-from pyromod import listen
 from pyrogram import Client, idle
 from pyrogram.errors import ApiIdInvalid, ApiIdPublishedFlood, AccessTokenInvalid
+
+from Instaloader import Config
 
 
 logging.basicConfig(
@@ -33,4 +33,3 @@ if __name__ == "__main__":
     idle()
     app.stop()
     print("Bot stopped. Alvida!")
-    
