@@ -33,3 +33,4 @@ if __name__ == "__main__":
     idle()
     app.stop()
     print("Bot stopped. Alvida!")
+    
