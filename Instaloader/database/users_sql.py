@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String
 from sqlalchemy.sql.sqltypes import BigInteger
-from Instaloader.database import BASE, SESSION, engine
+from Instaloader.database import BASE, SESSION
 
 
 class Users(BASE):
