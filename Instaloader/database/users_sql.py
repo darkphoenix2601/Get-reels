@@ -27,7 +27,7 @@ async def num_users():
 
 
 async def set_info(user_id, username, password):
-    q = SESSION.query(Users).get(user_id)
+    q = SESSION.query(Users).filter_by(user_id=user_id).first()
     if q:
         q.insta_username = username
         q.insta_password = password
