@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String
-from sqlalchemy.sql.sqltypes import BigInteger 
-from Instaloader.database import BASE, SESSION
+from sqlalchemy.sql.sqltypes import BigInteger
+from Instaloader.database import BASE, SESSION, engine
 
 
 class Users(BASE):
@@ -16,7 +16,7 @@ class Users(BASE):
         self.insta_password = insta_password
 
 
-Users.__table__.create(checkfirst=True)
+Users.__table__.create(bind=engine, checkfirst=True)
 
 
 async def num_users():
@@ -49,7 +49,7 @@ async def delete_info(user_id):
 
 
 async def get_info(user_id):
-    q: Users = SESSION.query(Users).get(user_id)
+    q = SESSION.query(Users).get(user_id)
     if q:
         if q.insta_password:
             info = q.insta_username, q.insta_password
