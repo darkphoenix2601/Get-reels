@@ -1,15 +1,14 @@
+from Instaloader.config import Config
 from sqlalchemy import create_engine
+
+engine = create_engine(Config.DATABASE_URL)
+
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, scoped_session
-from Config import DATABASE_URL
-
-
-def start() -> scoped_session:
-    engine = create_engine(DATABASE_URL)
-    BASE.metadata.bind = engine
-    BASE.metadata.create_all(engine)
-    return scoped_session(sessionmaker(bind=engine, autoflush=False))
-
+from sqlalchemy.orm import sessionmaker
 
 BASE = declarative_base()
-SESSION = start()
+SESSION = sessionmaker(bind=engine)()
+
+def create_tables():
+    BASE.metadata.create_all(engine)
+        
