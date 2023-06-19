@@ -1,7 +1,7 @@
-from Instaloader.config import Config
+from Config import DATABASE_URL
 from sqlalchemy import create_engine
 
-engine = create_engine(Config.DATABASE_URL)
+engine = create_engine(DATABASE_URL)
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
